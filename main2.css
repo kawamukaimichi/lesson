@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+
+
+header{
+	height:50px;
+	background-color:#ffffff;
+	background-color:;
+	position:fixed;
+ 	top:0;
+ 	z-index:10;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.btn{
+	display:inline-block;
+	padding:8px 10px;
+	color:#738189;
+	font-size:13px;
+}
+
+.fa-twitter{
+	color:#38a1f3;
+	margin:0px 0px 0px 200px;
+}
+
+.tweet{
+	float:right;
+}
+
+.icon{
+	float:right;
+	border-radius: 50%;
+}
+
+form{
+	display:inline-block;
+	float:right;
+}
+
+
+
+.maincontiner{
+	width: 1000px;
+	height:  1000px;
+	background-color: #e6ecf0;
+}
+
+.sideleft{
+	width:300px;
+	float:left;
+}
+
+.mainwrapper{
+	width: 500px;
+	float:left;
+}
+
+.sidetop{
+	margin-top:60px;
+	margin-left: 10px;
+	padding:10px;
+	width: 280px;
+	height:200px;
+	background-color:#ffffff;
+	position:relative;
+}
+
+
+.icon2{
+	border-radius: 50%;
+	border: 3px solid #ffffff;
+	position:absolute;
+	top:80px;
+	left:20px;
+}
+
+
+
+
+.name1{
+	position:absolute;
+	top:90px;
+	left:120px;
+}
+
+.fa-lock{
+	margin: 0px 0px 0px 10px;
+}
+
+.id1{
+	position:absolute;
+	top:120px;
+	left:120px;
+	font-size:14px;
+	color:#657686;
+}
+
+.tweet1{
+	position:absolute;
+	top:135px;
+	left:20px;
+	font-size:14px;
+	color:#657686;
+}
+
+.tweetC{
+	position:absolute;
+	top:150px;
+	left:40px;
+	font-size:20px;
+	color:#38a1f3;
+}
+.follow{
+	position:absolute;
+	top:135px;
+	left:150px;
+	font-size:14px;
+	color:#657686;
+}
+
+.followC{
+	position:absolute;
+	top:150px;
+	left:170px;
+	font-size:20px;
+	color:#38a1f3;	
+}
+
+
+
+.sidemain{
+	margin-top:10px;
+	margin-left:10px;
+	padding: 10px;
+	width: 280px;
+	height:600px;
+	background-color:#ffffff;
+}
+
+.sidemain3 h3{
+	display:inline-block;
+	float:left;
+}
+
+.sidemain3 p{
+	display:inline-block;
+	float:right;
+}
+
+
+.sidemain4{
+	clear: both;
+}
