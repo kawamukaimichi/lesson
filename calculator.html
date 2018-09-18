@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>電卓</title>
+    <style>
+    thead {
+        padding: 5px;
+    }
+
+    input {
+        width: 236px;
+        height: 30px;
+        padding: 5px;
+        font-size: 25px;
+        text-align: right;
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    button {
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+        border-radius: 10px;
+        background-color: #d3f7f9;
+    }
+
+    table {
+        background-color: #0adeec;
+    }
+
+    body {
+        padding: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <script>
+    window.michi1 = 0;
+    window.michi2 = 0;
+    window.michi3 = 0;
+
+
+    var save = function(a) {
+        if (window.michi3 == 0 && window.michi1 == 0) {
+            window.michi1 = a;
+            document.getElementById("display").value = window.michi1;
+        } else if (window.michi3 == 0) {
+            window.michi1 = window.michi1 + `${a}`;
+            document.getElementById("display").value = window.michi1;
+        } else if (window.michi2 == 0) {
+            window.michi2 = a;
+            document.getElementById("display").value = window.michi2;
+        } else {
+            window.michi2 = window.michi2 + `${a}`;
+            document.getElementById("display").value = window.michi2;
+        }
+    };
+
+
+
+    var think = function(a) {
+        window.michi3 = a;
+    };
+
+    var reset = function() {
+        window.michi1 = 0;
+        window.michi2 = 0;
+        window.michi3 = 0;
+        document.getElementById("display").value = window.michi1;
+    };
+
+
+
+
+    var answer = function() {
+        switch (window.michi3) {
+            case 'division':
+                var correct = window.michi1 / window.michi2;
+                document.getElementById("display").value = correct;
+                window.michi1 = 0;
+                window.michi2 = 0;
+                window.michi3 = 0;
+                break;
+
+            case 'multiplication':
+                var correct = window.michi1 * window.michi2;
+                document.getElementById("display").value = correct;
+                window.michi1 = 0;
+                window.michi2 = 0;
+                window.michi3 = 0;
+                break;
+
+            case 'addition':
+                var num1 = Number(window.michi1);
+                var num2 = Number(window.michi2);
+                var correct = num1 + num2;
+                document.getElementById("display").value = correct;
+                window.michi1 = 0;
+                window.michi2 = 0;
+                window.michi3 = 0;
+                break;
+
+            case 'subtraction':
+                var correct = window.michi1 - window.michi2;
+                document.getElementById("display").value = correct;
+                window.michi1 = 0;
+                window.michi2 = 0;
+                window.michi3 = 0;
+                break;
+
+            default:
+                window.michi1 = 0;
+                window.michi2 = 0;
+                window.michi3 = 0;
+                document.getElementById("display").value = window.michi1;
+                break;
+        }
+
+    };
+    </script>
+    <table>
+        <input type="text" id="display" value="0">
+        <tr>
+            <td>
+                <button onclick="save(7)">7</button>
+            </td>
+            <td>
+                <button onclick="save(8)">8</button>
+            </td>
+            <td>
+                <button onclick="save(9)">9</button>
+            </td>
+            <td>
+                <button onclick="think('division')">÷</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="save(4)">4</button>
+            </td>
+            <td>
+                <button onclick="save(5)">5</button>
+            </td>
+            <td>
+                <button onclick="save(6)">6</button>
+            </td>
+            <td>
+                <button onclick="think('multiplication')">×</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="save(1)">1</button>
+            </td>
+            <td>
+                <button onclick="save(2)">2</button>
+            </td>
+            <td>
+                <button onclick="save(3)">3</button>
+            </td>
+            <td>
+                <button onclick="think('addition') ">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="reset()">C</button>
+            </td>
+            <td>
+                <button onclick="save(0)">0</button>
+            </td>
+            <td>
+                <button onclick="answer('=') ">=</button>
+            </td>
+            <td>
+                <button onclick="think('subtraction')">-</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
